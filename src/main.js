@@ -12,10 +12,18 @@ friendsService.getFriends(4).subscribe(f => {
   render(friendsList(friends), document.body);
 });
 
+const listener = {
+  handleEvent(e) {
+    console.log('clicked');
+  },
+  capture: true,
+};
+
 const friendsList = (friendsList) => html` 
   <ul class="${classMap({ 'wrapper': true })}"> 
     ${repeat(friendsList, (friend) => friend.id, (friend) =>
   html`<li>${friend.id} ${friend.name}</li>`)}
-  </ul>`
+  </ul>
+  <button @click=${listener}>Click Me</button>`
 
 
