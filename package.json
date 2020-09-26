@@ -1,0 +1,18 @@
+{
+  "name": "lit-html-app",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "npm run closure && node server.js",
+    "closure": "java -jar node_modules/google-closure-compiler-java/compiler.jar --flagfile closure.conf",
+    "closure-debug": "java -jar node_modules/google-closure-compiler-java/compiler.jar --flagfile closure.conf --debug --formatting PRETTY_PRINT"
+  },
+  "devDependencies": {
+    "google-closure-compiler": "20200719.0.0"
+  },
+  "dependencies": {
+    "compression": "1.7.4",
+    "express": "4.17.1",
+    "lit-html": "^1.3.0",
+    "rxjs": "6.4.0"
+  }
+}
